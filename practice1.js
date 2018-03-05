@@ -17,7 +17,7 @@ var totalSum = sumArray.reduce((item, index) => {
 })
 console.log(totalSum)
 
-// Fizz Buzz 
+// Fizz Buzz
 
 for (var i = 1; i <= 25; i++) {
   if (i % 3 === 0 && i % 5 === 0) {
@@ -30,6 +30,18 @@ for (var i = 1; i <= 25; i++) {
     console.log(i)
   }
 }
- // Refactor FizzBuzz with Foreach
- var myArray = Array(25).fill().map((input,index)=>{ return index + 1 });
- console.log(myArray)
+// Refactor FizzBuzz with Foreach
+var myArray = Array(100).fill().map((input, index) => { return index + 1 })
+console.log(myArray)
+
+myArray.forEach((item, idex) => {
+  if (item % 3 === 0 && item % 5 === 0) {
+    console.log('fizzbuzz')
+  } else if (item % 3 === 0) {
+    console.log('fizz')
+  } else if (item % 5 === 0) {
+    console.log('buzz')
+  } else {
+    console.log(item)
+  }
+})
