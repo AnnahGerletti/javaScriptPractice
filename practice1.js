@@ -69,3 +69,31 @@ myArray.forEach((item, index) => {
 
   console.log(output)
 })
+
+// forEach practice
+
+var lettersOne = 'ABCD'
+var lettersTwo = 'BBDD'
+
+var newFirstArr = lettersOne.split('')
+var newSecArr = lettersTwo.split('')
+
+newFirstArr.forEach((item, index) => {
+  var output = newSecArr.map((itemj, indexj) => {
+    if (item[index + 1] === itemj[indexj + 1]) {
+      console.log('yay')
+    } else { console.log('noo') }
+    return output
+  })
+})
+
+// Refactor using Ternary opperator
+// newFirstArr.forEach((item, index) => {
+//   var output = newSecArr.map((itemj, indexj) => {
+//     if (item[index + 1] === itemj[indexj + 1]) {
+//       console.log('yay')
+//     } else { console.log('noo') }
+//   })
+//   console.log(output)
+
+// })
