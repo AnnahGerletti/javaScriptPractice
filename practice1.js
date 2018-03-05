@@ -51,12 +51,9 @@ myArray.forEach((item, idex) => {
 myArray.forEach((item, index) => {
   var output = ''
 
-  if (item % 3 === 0) {
-    output += 'fizz'
-  }
-  if (item % 5 === 0) {
-    output += 'buzz'
-  } else { output = item }
+  output += item % 3 === 0
+
+  output += item % 5 === 0
 
   console.log(output)
 })
