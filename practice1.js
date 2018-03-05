@@ -57,3 +57,15 @@ myArray.forEach((item, index) => {
 
   console.log(output)
 })
+
+myArray.forEach((item, index) => {
+  var output = ''
+
+  if (item % 3 === 0) {
+    output += 'fizz'
+  } if (item % 5 === 0) {
+    output += 'buzz'
+  } else { output = item }
+
+  console.log(output)
+})
