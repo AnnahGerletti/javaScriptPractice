@@ -79,12 +79,10 @@ var newFirstArr = lettersOne.split('')
 var newSecArr = lettersTwo.split('')
 
 newFirstArr.forEach((item, index) => {
-  var output = newSecArr.map((itemj, indexj) => {
-    if (item[index + 1] === itemj[indexj + 1]) {
-      console.log('yay')
-    } else { console.log('noo') }
-    return output
-  })
+
+  if (item === newSecArr[index]) {
+    console.log('yay')
+  } else { console.log('noo') }
 })
 
 // Refactor using Ternary opperator
