@@ -128,3 +128,19 @@ console.log(checkPal('nick'))
 var extraChars = 'too, many, commas'
 var foo = extraChars.replace(/,/g, '')
 console.log(foo)
+
+// Line Break
+// Uppercase every 2nd letter of the str
+
+// var magicWords = 'programming is magical and awesome'
+// var replaceStr = magicWords.replace(/\s/g, '')
+// var newArr = replaceStr.split('')
+// newArr.map((arr, index) => {
+//   var finalStr = ''
+//   if (index % 2 === 0) {
+//     finalStr += arr.toString().toUpperCase()
+//   } else {
+//     return finalStr
+//   }
+//   console.log(finalStr)
+// })
