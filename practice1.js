@@ -97,9 +97,9 @@ lettersOneArr.forEach((input, index) => {
 
   if (output !== -1) {
     lettersTwoArr.splice(output, 1)
-    console.log('yay ' + input)
+    console.log('yay ' + input + index)
   } else {
-    console.log('nooo ' + input)
+    console.log('nooo ' + input + index)
   }
 })
 
