@@ -108,16 +108,16 @@ lettersOneArr.forEach((input, index) => {
 
 function reverseWord (word) {
   var wordToArr = word.split('')
-  wordToArr = wordToArr.reverse()
-  return wordToArr
+  var reversed = wordToArr.reverse()
+  reversed = reversed.join()
+  return reversed
 }
 
 function checkPal (word) {
   var forwardWord = word.split('')
+  forwardWord = forwardWord.join()
   if (forwardWord === reverseWord(word)) {
-    console.log(word + ' is a Palendrone')
-  }
+    return (word + ' is a Palendrone')
+  } else { return 'not a palendrone' }
 }
-
-console.log(checkPal('racecar'))
-
+console.log(checkPal('nick'))
