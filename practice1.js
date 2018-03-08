@@ -106,17 +106,18 @@ lettersOneArr.forEach((input, index) => {
 // Line Break
 // Function that tests for palindrome
 
-// reverseWord(word => {
-//   var reverseWord = word.split('')
-//   reverseWord += reverseWord.reverse()
-//   return reverseWord
-// })
+function reverseWord (word) {
+  var wordToArr = word.split('')
+  wordToArr = wordToArr.reverse()
+  return wordToArr
+}
 
-// checkPal(word => {
-//   var forwardWord = word.split('')
-//   if (forwardWord == word.reverseWord) {
-//     console.log('Palendrone')
-//   }
-// })
+function checkPal (word) {
+  var forwardWord = word.split('')
+  if (forwardWord === reverseWord(word)) {
+    console.log(word + ' is a Palendrone')
+  }
+}
 
-// console.log(checkPal('racecar'))
+console.log(checkPal('racecar'))
+
