@@ -121,3 +121,10 @@ function checkPal (word) {
   } else { return 'not a palendrone' }
 }
 console.log(checkPal('nick'))
+
+// Line Break
+// removeing characters from a string
+
+var extraChars = 'too, many, commas'
+var foo = extraChars.replace(/,/g, '')
+console.log(foo)
