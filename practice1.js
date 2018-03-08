@@ -31,7 +31,7 @@ for (var i = 1; i <= 25; i++) {
   }
 }
 // Refactor FizzBuzz with Foreach
-var myArray = Array(100).fill().map((input, index) => { return index + 1 })
+var myArray = Array(25).fill().map((input, index) => { return index + 1 })
 console.log(myArray)
 
 myArray.forEach((item, idex) => {
@@ -46,7 +46,7 @@ myArray.forEach((item, idex) => {
   }
 })
 
-// refactor FizzBuzz with fewer steps
+// refactor FizzBuzz, output boolens
 
 myArray.forEach((item, index) => {
   var output = ''
@@ -79,19 +79,44 @@ var newFirstArr = lettersOne.split('')
 var newSecArr = lettersTwo.split('')
 
 newFirstArr.forEach((item, index) => {
-
   if (item === newSecArr[index]) {
-    console.log('yay')
-  } else { console.log('noo') }
+    console.log('yep')
+  } else { console.log('nuha') }
 })
 
-// Refactor using Ternary opperator
-// newFirstArr.forEach((item, index) => {
-//   var output = newSecArr.map((itemj, indexj) => {
-//     if (item[index + 1] === itemj[indexj + 1]) {
-//       console.log('yay')
-//     } else { console.log('noo') }
-//   })
-//   console.log(output)
+// Line Break
+// String Methods
+var lettersOne = 'EEFF'
+var lettersTwo = 'AEFG'
 
+var lettersOneArr = lettersOne.split('')
+var lettersTwoArr = lettersTwo.split('')
+
+lettersOneArr.forEach((input, index) => {
+  var output = lettersTwoArr.indexOf(input)
+
+  if (output !== -1) {
+    lettersTwoArr.splice(output, 1)
+    console.log('yay ' + input)
+  } else {
+    console.log('nooo ' + input)
+  }
+})
+
+// Line Break
+// Function that tests for palindrome
+
+// reverseWord(word => {
+//   var reverseWord = word.split('')
+//   reverseWord += reverseWord.reverse()
+//   return reverseWord
 // })
+
+// checkPal(word => {
+//   var forwardWord = word.split('')
+//   if (forwardWord == word.reverseWord) {
+//     console.log('Palendrone')
+//   }
+// })
+
+// console.log(checkPal('racecar'))
