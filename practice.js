@@ -126,7 +126,7 @@ color.forEach((item, index, array) => {
   } else {
     item = item.toLowerCase()
   }
-  return console.log(index, item)
+  console.log(index, item)
 })
 
 color.forEach((item, index, array) => {
