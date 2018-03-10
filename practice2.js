@@ -32,3 +32,56 @@ var results = myArray.map(num => {
 })
 
 console.log(results)
+
+// Line Break, Refactor
+console.log('\n')
+
+function smallRangeNum (num) {
+  if (num % 2 === 0) {
+    return (num + ' is a SMALL EVEN number')
+  } else {
+    return (num + ' is a SMALL ODD number')
+  }
+}
+function middleRangeNum (num) {
+  if (num % 4 === 0) {
+    return (num + ' is BIG and / by 4')
+  } else {
+    return (num + ' is BIG but NOT / by 4')
+  }
+}
+
+function highRangeNum (num) {
+  if (num % 2 !== 0) {
+    return (num + ' is BIG and ODD')
+  } else {
+    return (num + ' is BIG but EVEN')
+  }
+}
+
+var refactorResults = myArray.map(num => {
+  var changeNum = (num * 3) + 3
+  if (changeNum < 100) {
+    return smallRangeNum(changeNum)
+  } else if (changeNum > 100 && changeNum < 150) {
+    return middleRangeNum(changeNum)
+  } else if (changeNum > 150) {
+    return highRangeNum(changeNum)
+  } else {
+    return (changeNum)
+  }
+})
+
+console.log(refactorResults)
+
+// LineBreak
+// Multiply numbers output the results
+console.log('\n' + "numbers")
+
+var oneArr = [1, 3, 5, 6, 8, 9, 14]
+var twoArr = [9, 33, 52, 2, 1, 5, 88]
+
+oneArr.forEach((input, index) => {
+  var results = oneArr[index] * twoArr[index]
+  console.log(results)
+})
