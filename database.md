@@ -1,4 +1,4 @@
-#Database flow work
+# Database flow work
 
 ### Web Challenge Website
 
@@ -18,7 +18,7 @@
 
 ### Table Schema
 
-/***
+
 | __Users__ | 
 |-----------|
 | ID        | 
@@ -27,7 +27,7 @@
 | email     |
 | pw hash   |
 |           |
-***/
+
 
 /***
 | __Animals__ | __Sports__ | __Fruits__ |
