@@ -106,6 +106,7 @@ console.log('every second Num' + '\n')
 
 oneArray.forEach((input, index) => {
   if (index % 2 !== 0) {
-    console.log('1st Array ' + input) 
+    console.log('2nd Array ' + twoArray[index])
+    console.log('1st Array ' + input)
   }
 })
