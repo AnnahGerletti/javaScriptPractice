@@ -21,17 +21,39 @@
 
 | __Users__ | 
 |-----------|
-| ID        | 
-|language_id| 
-| Name      |
+| id        | 
+| language_id| 
+| name      |
 | email     |
 | pw hash   |
 |           |
 
+| __codeChallenge__ | 
+|-------------------|
+|id               | 
+|languageId       | 
+|difficulty       |
+|text of challenge|
+|   |
+|           |
 
-/***
-| __Animals__ | __Sports__ | __Fruits__ |
-|-------------|------------|------------|
-| Cat         | Soccer     | Apple      |
-| Dog         | Basketball | Orange     |
-***/
+| __results__ | 
+|------------------|
+| id       | 
+| codeChallenge_id| 
+| user_id      |
+| submitted      |
+| passed/failed     |
+| date   |
+|           |
+
+# Schema Logic
+### Think about an approch to finding out: 
+
+1. Who has completed the most challenges successfully?
+2. What was the last successful completed challenge for a user?
+3. How to log in a user
+4. Retrieve a list of challenges for a programming language
+5. The names of the people that have completed the last 10 challenges successfully
+6. The newest code challenge created for a programming language
+7. The number of code challenges for each programming language
