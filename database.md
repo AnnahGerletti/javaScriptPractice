@@ -1,4 +1,4 @@
-# Database flow work
+# Database workflow
 
 ### What kind of DB would you need for a Web Challenge Website?
 
@@ -7,13 +7,18 @@
 - Code challenges
 - Results table 
 
-2. data types needed 
+2. Querying a DataBase (SQL)
+- select, update, insert, delete
+- count()
+- order by()
+
+3. data types needed 
 - **Integer** - id's, a rating of difficulty
 - **varchar (64)** - limits the amount of characters can use for phone # or name.
 - **text** - good for emails, write code challenges in this way
-- **binary/ text** - passwords
+- **binary/ varchar** - password hash
 - **blob** - for small DB but use up to much space if save photos in Data base. 
-- **date time** - time stamped when it was submited
+- **datetime** - time stamped when it was submited
 - **boolean** - Y/N has something been entered
 
 ### Table Schema
@@ -26,15 +31,16 @@
 | name      |
 | email     |
 | pw hash   |
-| date created|
+| dateCreated|
+| completedChallenges| 
 
 | __codeChallenge__ | 
 |-------------------|
 |id               | 
 |languageId       | 
 |difficulty       |
-|text of challenge|
-|date created|
+|textOfChallenge|
+|dateCreated|
 
 | __results__ | 
 |------------------|
@@ -42,16 +48,16 @@
 | codeChallenge_id| 
 | user_id      |
 | submitted      |
-| passed/failed     |
-| date submited  |
+| successful     |
+| dateSubmited  |
 |           |
 
 # Schema Logic
 ### Think about an approch to finding out: 
 
 1. Who has completed the most challenges successfully?
-  - From the results table, use the user_id to render the users who have submitted passing challenges (passed in any language). Compaire the amount of passed challenges, take that user_id link back to User table to find info on that user.    
- 
+  - reference the completed challenges field of the user table, sort through users to find most user who completed the most.  
+
 2. What was the last successful completed challenge for a user?
   - Use the users table to find a specific user, connect to the results table find the last passing challenge id, take that challenge id and render it from the codeChallenge table
 
@@ -68,4 +74,4 @@
   - code challenge table, would use the languageId and the date created to find the specific newest code challenge. 
 
 7. The number of code challenges for each programming language
-  - Codechallenge table, divide up challenges by each language, using challengeId find out how many there are of each. 
+  - Codechallenge table, divide up challenges by each language, using count() to count challengeId find out how many there are of each. 
