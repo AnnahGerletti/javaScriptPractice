@@ -20,11 +20,18 @@
 
 /***
 | __Users__ | 
-|------------|
+|-----------|
 | ID        | 
 |language_id| 
 | Name      |
 | email     |
 | pw hash   |
 |           |
+***/
+
+/***
+| __Animals__ | __Sports__ | __Fruits__ |
+|-------------|------------|------------|
+| Cat         | Soccer     | Apple      |
+| Dog         | Basketball | Orange     |
 ***/
