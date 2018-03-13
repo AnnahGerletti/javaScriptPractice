@@ -121,6 +121,9 @@ console.log('merge array, print every 3rd num\n')
 // console.log(output)
 
 // Line Break
+// The smArrays function gets passed everyThirs(the array) and size(new arr length)
+// THis function breaks up a large arr into smaller pieces using slice()
+// If you rm the pop(), the var splitArr will return the lg arr broken into four smaller arrs ea containing three elements. 
 
 var everyThird = oneArray.concat(twoArray)
 function smArrays (everyThird, size) {
