@@ -110,3 +110,30 @@ oneArray.forEach((input, index) => {
     console.log('1st Array ' + input)
   }
 })
+
+console.log('merge array, print every 3rd num\n')
+
+// ---> var newArray = oneArray.concat(twoArray)
+// var output = newArray.filter(num => {
+//   var numLength = newArray.length
+//   numLength / 2
+// })
+// console.log(output)
+
+// Line Break
+
+var everyThird = oneArray.concat(twoArray)
+function smArrays (everyThird, size) {
+  var index = 0
+  var arrayLength = everyThird.length
+  var splitArr = []
+
+  for (index = 0; index < arrayLength; index += size) {
+    miniArr = everyThird.slice(index, index + size)
+    popedArr = miniArr.pop()
+    splitArr.push(popedArr)
+  }
+  return splitArr
+}
+
+console.log(smArrays(everyThird,3)) 
