@@ -5,3 +5,15 @@ var birthdays = {
   'gus': '1991-08-20 17:33:03'
 }
 
+console.log(Object.keys(birthdays))
+console.log(Object.values(birthdays))
+
+console.log('sets a current date and time \n')
+// Date() obj is a built-in obj in JS. new Date() creates a new instance of the date.THere are many Methods that can be used with the Date object.
+const now = new Date()
+
+console.log(now)
+
+for (var prop in birthdays){
+
+}
