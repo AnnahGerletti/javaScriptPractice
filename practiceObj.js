@@ -1,8 +1,8 @@
 var birthdays = {
-  'nick': '1983-09-22 12:00:00',
-  'annah': '1986-02-08 23:00:00',
-  'jan': '1954-08-08 14:22:33',
-  'gus': '1991-08-20 17:33:03'
+  'nick': 'September 22 1983 12:00',
+  'annah': 'February 08 1986 23:00',
+  'jan': 'August 08 1954 14:22',
+  'gus': 'August 20 1991 17:33'
 }
 
 console.log(Object.keys(birthdays))
@@ -14,6 +14,20 @@ const now = new Date()
 
 console.log(now)
 
-for (var prop in birthdays){
+// Pulling days of the week from the birthdays
 
+var birthdayArr = Object.values(birthdays)
+
+function birthday (month, day, year, time) {
+  this.month = month
+  this.day = day
+  this.year = year
+  this.time = time
 }
+
+birthdayArr.map((date) => {
+  var day = date.getDay()
+  return day
+})
+
+console.log(day)
