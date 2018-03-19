@@ -18,6 +18,12 @@ console.log(now)
 
 var birthdayArr = Object.values(birthdays)
 
+function daysOfTheWeek (birthday) {
+  return new Date(birthday)
+}
+
+birthdayArr.map(daysOfTheWeek)
+
 // function birthday (month, day, year, time) {
 //   this.month = month
 //   this.day = day
@@ -31,7 +37,9 @@ var birthdayArr = Object.values(birthdays)
 // })
 
 // console.log(day)
+// birthdayArr.map(input => {
+//   var dayOfWeek = new Date(input)
+//   return dayOfWeek
+// })
 
-var dayOfWeek = new Date(birthdays.nick)
-
-console.log("Nick was born " + dayOfWeek)
+// console.log('Nick was born ' + dayOfWeek)
